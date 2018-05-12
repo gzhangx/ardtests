@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gzhangx/nodeser#readme",
   "dependencies": {
+    "canvas": "^1.6.10",
     "serialport": "^6.2.0"
   }
 }
