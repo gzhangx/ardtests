@@ -49,11 +49,13 @@ void loop() {
     }
     float scale = (p12 - 1100.0)/800 * SCALE;
     int needRun = scale > counter?1:0;
-    if (needRun) {
+    if (!needRun) {
       RUN9 = LOW;
       RUN10= LOW;
     }
     sprintf(buffer, "running %d scale=%i %d p11=%d runing=%d", counter, (int)(scale*10),p12,p11, needRun);
     Serial.println(buffer);
+    digitalWrite(9, RUN9);
+    digitalWrite(10, RUN10);
   }
 }
